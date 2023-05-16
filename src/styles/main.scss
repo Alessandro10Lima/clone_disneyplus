@@ -24,7 +24,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
-    list-style: none;
 }
 
 
@@ -46,14 +45,26 @@ body{
 
 .text--big{
     @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px);
+    }
 }
 
 .text{
     @include text;
+
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
 }
 
 .text--small{
     @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(11px);
+    }
 }
 
 .link-text{
@@ -64,14 +75,33 @@ body{
 
 .title--big{
     @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px);
+    }
+    @media (max-width: 1023px) {
+        @include title(32px);
+    }
 }
 
 .title{
     @include title;
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
+
+    @media (max-width: 1023px) {
+        @include title(24px);
+    }
 }
 
 .title--small{
     @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
 }
 
 .button{
@@ -122,12 +152,25 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media (max-width: 768px) {
+        display: block;
+        padding: 10vw 5.6vw;
+    }
+
     img{
         max-width: 100%;
     }
 
     &__text_container{
         padding: 0 2vw;
+
+        @media (max-width:768px){
+            text-align: center;
+        }
+
+        @media (max-width:1023px){
+            padding: 0 5vw;
+        }
 
         h2{
             margin-bottom: 24px;
@@ -151,6 +194,14 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media (max-width: 768px) {
+            position: relative;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+        }
     }
 
     }

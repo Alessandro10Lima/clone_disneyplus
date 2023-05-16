@@ -4,6 +4,10 @@
     h2{
         text-align: center;
         margin-bottom: 24px;
+
+        @media (max-width:1023px){
+            font-size: 32px;
+        }
     }
 
     &__questions{
@@ -21,6 +25,10 @@
                 display: block;
                 cursor: pointer;
                 position: relative;
+
+                @media (max-width:768px){
+                    font-size: 15px;
+                }
 
                 &::after{
                     content: '+';

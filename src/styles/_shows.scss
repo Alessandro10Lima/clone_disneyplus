@@ -4,12 +4,20 @@
     padding: 2vw 5.6vw;
     min-height: 50vw;
 
+    @media (min-width:768px) and (max-width:1023px){
+        padding: 16vw 5.6vw;
+    }
+
     &__list{
         margin-top: 44px;
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
         list-style: none;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
 
         &--is-active{
             display: grid;
@@ -28,6 +36,12 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width:768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 20px;
+        }
+
         &__button{
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
@@ -41,6 +55,10 @@
 
             &--is-active{
                 border-color: variaveis.$corTextoSecundario;
+            }
+
+            @media (max-width:768px) {
+                font-size: 16px;
             }
         }
     }
