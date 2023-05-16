@@ -11,6 +11,7 @@
         &__item{
             background-color: #13151d;
             margin-bottom: 16px;
+            list-style: none;
 
 
             &__question{
@@ -38,6 +39,16 @@
                 overflow: hidden;
                 padding: 0 24px;
                 transition: height, 0.3s ease;
+
+                &__list{
+                    text-align: left;
+                    margin-left: 40px;
+                }
+
+                li{
+                    margin-top: 24px;
+                    margin-bottom: 24px;
+                }
             }
 
             &--is-open{
